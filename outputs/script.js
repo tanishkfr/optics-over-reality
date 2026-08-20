@@ -35,6 +35,11 @@ replayButton?.addEventListener('click', () => {
 });
 
 const stageObserver = new IntersectionObserver((entries) => {
+  if (!body.classList.contains('is-expanded')) {
+    setStage(1);
+    return;
+  }
+
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     setStage(entry.target.id === 'understand-state' ? 3 : 2);
