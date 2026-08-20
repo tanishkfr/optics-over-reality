@@ -123,6 +123,7 @@ button { font: inherit; }
 .discover-intro, .understand-intro { max-width: 760px; }
 .discover-intro h2 { font-size: clamp(52px, 7vw, 108px); }
 .discover-intro p { max-width: 42ch; }
+.frame-realization { border-left: 1px solid var(--signal); color: var(--paper-bright); font-size: clamp(26px, 3.4vw, 52px); letter-spacing: -0.045em; line-height: 1.02; margin: clamp(56px, 8vh, 110px) 0 0; max-width: 20ch; padding-left: 18px; }
 
 .evidence-grid { display: grid; gap: clamp(48px, 8vw, 120px) 8vw; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: clamp(72px, 10vh, 140px) 0 0; max-width: 1180px; }
 .evidence-note { border-top: 1px solid var(--line); padding-top: 17px; }
@@ -170,6 +171,7 @@ button { font: inherit; }
   .evidence-note + .evidence-note { margin-top: 54px; }
   .pattern-block { margin-top: 100px; }
   .pattern-chain { margin-top: 54px; }
+  .frame-realization { font-size: 30px; margin-top: 64px; max-width: 17ch; }
   .understand-grid { margin-top: 88px; }
   .insight-copy { margin-top: 70px; padding-top: 0; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
