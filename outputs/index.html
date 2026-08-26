@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#111310" />
-    <meta name="description" content="Optics Over Reality — an interactive A1 research experience." />
-    <title>Optics Over Reality</title>
+    <meta name="description" content="Optics Over Reality — a sourced Indian case series translating A1 research into an interactive frame." />
+    <title>Optics Over Reality — Indian Case Series</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <!-- The CRT presentation layer is scoped to body[data-shell="crt"]. Remove the attribute to restore the editorial frame shell. -->
+  <body data-shell="crt">
     <div class="site-shell">
       <header class="topbar" aria-label="Experience navigation">
         <div class="brand-lockup">
@@ -16,9 +17,9 @@
           <span>OPTICS / REALITY</span>
         </div>
         <div class="topbar-meta">
-          <span class="topbar-kicker">A1 RESEARCH / FIELD STUDY</span>
-          <span class="topbar-progress" role="status" aria-live="polite" aria-label="Stage 1 of 3">
-            <span id="stage-count">01</span><i aria-hidden="true"></i><span>03</span>
+          <span class="topbar-kicker">A2 CASE SERIES / INDIA</span>
+          <span class="topbar-progress" id="case-progress" role="status" aria-live="polite" aria-label="Case 1 of 4">
+            <span>CASE</span><strong id="case-count">01</strong><i aria-hidden="true"></i><span id="case-total">04</span>
           </span>
         </div>
       </header>
@@ -26,101 +27,145 @@
       <main>
         <section class="see-state state-section" id="see-state" aria-labelledby="hero-title">
           <div class="state-intro see-intro">
-            <span class="state-tag">01 / SEE</span>
+            <span class="state-tag">A1 → A2 / CASE SERIES</span>
             <h1 id="hero-title">THE <em>PUBLIC</em><br />IMAGE</h1>
-            <p>The selected view is not the whole city.</p>
+            <p>Four Indian cases. One repeated pattern: when cities prepare a public-facing image, people, homes and livelihoods can be pushed outside the frame.</p>
           </div>
 
-          <div class="frame-viewport" id="frame-viewport" aria-label="Illustrative public-facing view; expand to see the A1 findings beyond this frame">
-            <img class="scene-image" src="./images/delhi-g20.png" alt="Illustrative public-facing view of G20 boards in front of informal housing; not an A1 case study" />
-            <div class="frame-mask" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
+          <div class="case-heading" aria-live="polite">
+            <div>
+              <span class="case-index" id="case-index">CASE 01 / 04</span>
+              <h2 id="case-title">AHMEDABAD / THE WALL</h2>
+              <span class="case-event" id="case-event">TRUMP VISIT · 2020</span>
             </div>
-            <div class="original-boundary" aria-hidden="true">
-              <span>ILLUSTRATIVE VIEW / 01</span>
-            </div>
-            <div class="frame-reveal" id="frame-reveal" aria-hidden="true">
-              <article class="frame-annotation frame-annotation--top-left">
-                <span class="annotation-index">A1 FINDING / 01 <i aria-hidden="true"></i></span>
-                <h3>PEOPLE REMOVED FROM THE PUBLIC IMAGE</h3>
-                <p>Poverty and informal activity are cleared from prominent spaces.</p>
-              </article>
-              <article class="frame-annotation frame-annotation--top-right">
-                <span class="annotation-index">A1 FINDING / 02 <i aria-hidden="true"></i></span>
-                <h3>DEVELOPMENT MADE VISIBLE</h3>
-                <p>Cities are rapidly beautified before major international events.</p>
-              </article>
-              <article class="frame-annotation frame-annotation--bottom-left">
-                <span class="annotation-index">A1 FINDING / 03 <i aria-hidden="true"></i></span>
-                <h3>DISPLACEMENT WITHOUT ADEQUATE ALTERNATIVES</h3>
-                <p>Communities can be removed while the visible city is presented as improved.</p>
-              </article>
-              <article class="frame-annotation frame-annotation--bottom-right">
-                <span class="annotation-index">A1 FINDING / 04 <i aria-hidden="true"></i></span>
-                <h3>WHAT CAN BE PHOTOGRAPHED IS CONTROLLED</h3>
-                <p>Public visibility can be shaped around the image presented to outsiders.</p>
-              </article>
-            </div>
+            <p id="case-summary">A polished route for a global visitor can make the city beyond it disappear.</p>
+            <span class="case-control-hint">TURN CHANNEL · 01—04 CASES</span>
           </div>
-          <div class="frame-caption" aria-label="Illustrative image note and source">
-            <span class="frame-caption-summary">ONE ILLUSTRATIVE VIEW / A1 FINDINGS BEYOND IT</span>
-            <span class="frame-caption-key"><strong>IMAGE</strong> selected public-facing view</span>
-            <span class="frame-caption-key frame-caption-key--finding"><strong>A1 FINDINGS</strong> what can fall outside it</span>
-            <span class="frame-caption-note">Illustrative image — not a specific case study.</span>
-            <span class="frame-credit">Image: user-supplied illustrative reference.</span>
-          </div>
+
+          <figure class="frame-figure">
+            <div class="crt-shell">
+              <div class="crt-set">
+                <div class="crt-screen-frame">
+                  <div class="crt-screen-glass">
+                    <div class="frame-viewport" id="frame-viewport" aria-label="Public-facing view for the current Indian case; expand to see the documented context">
+                      <img class="scene-image" id="scene-image" src="./images/cases/ahmedabad-trump-mural.jpg" alt="Public-facing view for the Ahmedabad wall case" />
+                      <div class="frame-mask" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span>
+                      </div>
+                      <div class="original-boundary" aria-hidden="true">
+                        <span id="frame-label">PUBLIC-FACING VIEW / 01</span>
+                      </div>
+                      <div class="frame-read" aria-hidden="true">
+                        <span>VISIBLE LAYER</span>
+                        <strong id="public-view">A BARRIER BECOMES THE BACKDROP.</strong>
+                      </div>
+                      <div class="frame-reveal" id="frame-reveal" aria-hidden="true">
+                        <article class="frame-annotation frame-annotation--top-left">
+                          <span class="annotation-index" id="expanded-kicker">A1 CASE / 01 <i aria-hidden="true"></i></span>
+                          <h3 id="expanded-title">THE WALL HID THE SETTLEMENT. IT DID NOT REMOVE IT.</h3>
+                          <p id="expanded-finding">Ahead of Donald Trump’s February 2020 visit, Ahmedabad built a wall along his motorcade route. Officials cited security and beautification; critics said it blocked the view of a nearby slum.</p>
+                          <a class="source-link source-link--overlay" id="expanded-source" href="https://www.latimes.com/world-nation/story/2020-02-18/india-hastily-builds-wall-along-slum-ahead-of-trump-visit" target="_blank" rel="noreferrer">READ THE SOURCE ↗</a>
+                        </article>
+                        <div class="frame-context-note">
+                          <span>WIDER CONTEXT</span>
+                          <strong id="context-note">THE IMAGE IS THE VIEW. THE SOURCE TRAIL IS THE EVIDENCE.</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="crt-controls">
+                  <span class="crt-channel-label">CHANNEL <strong id="crt-channel">01 / 04</strong></span>
+                  <span class="crt-view-state" id="crt-view-state">ON AIR</span>
+                  <button class="crt-action-control" id="expand-frame" type="button" aria-controls="discover-state" aria-expanded="false">
+                    <span class="button-label">ZOOM OUT</span>
+                    <small>REVEAL RECORD →</small>
+                  </button>
+                  <span class="crt-control-label">SELECT CASE</span>
+                  <div class="crt-case-switcher" role="group" aria-label="Select case">
+                    <button class="crt-case-button is-current" type="button" data-case="0" aria-label="Case 1: Ahmedabad wall" aria-current="true">01</button>
+                    <button class="crt-case-button" type="button" data-case="1" aria-label="Case 2: New Delhi makeover" aria-current="false">02</button>
+                    <button class="crt-case-button" type="button" data-case="2" aria-label="Case 3: New Delhi Commonwealth Games" aria-current="false">03</button>
+                    <button class="crt-case-button" type="button" data-case="3" aria-label="Case 4: Ahmedabad riverfront" aria-current="false">04</button>
+                  </div>
+                  <span class="crt-led"></span>
+                  <span class="crt-knob crt-knob--large"></span>
+                  <span class="crt-knob crt-knob--small"></span>
+                </div>
+              </div>
+            </div>
+            <figcaption class="frame-caption" aria-label="Image and evidence notes">
+              <span class="frame-caption-summary">ONE NARROW VIEW / ONE WIDER RECORD</span>
+              <span class="frame-caption-key"><strong>PUBLIC IMAGE</strong> what is made visible</span>
+              <span class="frame-caption-key frame-caption-key--finding"><strong>CASE EVIDENCE</strong> what the record adds</span>
+              <span class="frame-caption-note" id="case-caption">Image shows a public-facing scene; the claim is in the linked source.</span>
+              <a class="frame-credit" id="image-credit" href="https://www.latimes.com/world-nation/story/2020-02-18/india-hastily-builds-wall-along-slum-ahead-of-trump-visit" target="_blank" rel="noreferrer">Image: Associated Press via Los Angeles Times ↗</a>
+            </figcaption>
+          </figure>
 
           <div class="see-action">
-            <button class="frame-button" id="expand-frame" type="button" aria-controls="discover-state" aria-expanded="false">
-              <span class="button-label">EXPAND THE FRAME →</span>
-            </button>
-            <p>The frame selects the view. Expand to see what the A1 research says can fall outside it.</p>
+            <p>The narrow frame shows the public-facing layer. Zoom out to read what the case record places outside it.</p>
           </div>
         </section>
 
         <section class="discover-state state-section" id="discover-state" aria-labelledby="discover-title" aria-hidden="true">
           <div class="state-intro discover-intro">
-            <span class="state-tag">02 / DISCOVER</span>
-            <h2 id="discover-title">WHAT WAS<br /><em>OUTSIDE</em></h2>
-            <p>The image is illustrative. A1 research examined how major-event beautification can make displacement and disruption less visible.</p>
+            <span class="state-tag">02 / CONTEXT</span>
+            <h2 id="discover-title">THE WIDER<br /><em>RECORD</em></h2>
+            <p id="discover-intro">This series keeps the public image and the research claim separate: the photograph shows the visible layer; the source explains what it leaves out.</p>
           </div>
 
-          <p class="frame-realization">Nothing necessarily disappeared. It was outside the frame.</p>
+          <p class="frame-realization" id="frame-realization">The frame makes a city legible as progress. The source trail makes its exclusions legible too.</p>
 
-          <div class="evidence-grid" aria-label="A1 qualitative research findings">
-            <article class="evidence-note">
-              <span class="evidence-index">A1 FINDING / 01</span>
-              <h3>PEOPLE REMOVED FROM THE PUBLIC IMAGE</h3>
-              <p>Poverty and informal activity are cleared from prominent spaces.</p>
+          <div class="case-readout" aria-live="polite">
+            <article class="readout-panel">
+              <span class="state-tag">NARROW FRAME</span>
+              <p id="narrow-readout">A finished barrier frames the motorcade route.</p>
             </article>
-            <article class="evidence-note">
-              <span class="evidence-index">A1 FINDING / 02</span>
-              <h3>DEVELOPMENT MADE VISIBLE</h3>
-              <p>Cities are rapidly beautified before major international events.</p>
+            <article class="readout-panel readout-panel--evidence">
+              <span class="state-tag">WHAT THE CASE RECORDS</span>
+              <p id="evidence-readout">Ahead of Donald Trump’s February 2020 visit, Ahmedabad built a wall along his motorcade route. Officials cited security and beautification; critics said it blocked the view of a nearby slum.</p>
             </article>
-            <article class="evidence-note">
-              <span class="evidence-index">A1 FINDING / 03</span>
-              <h3>DISPLACEMENT WITHOUT ADEQUATE ALTERNATIVES</h3>
-              <p>Communities can be removed while the visible city is presented as improved.</p>
-            </article>
-            <article class="evidence-note">
-              <span class="evidence-index">A1 FINDING / 04</span>
-              <h3>WHAT CAN BE PHOTOGRAPHED IS CONTROLLED</h3>
-              <p>Public visibility can be shaped around the image presented to outsiders.</p>
-            </article>
+          </div>
+
+          <div class="case-source-strip">
+            <div>
+              <span class="state-tag">SOURCE TRAIL</span>
+              <p id="source-detail">Associated Press reporting records a 1,640-foot wall erected before Trump’s visit; officials cited security and beautification while critics said it blocked the view of a nearby slum.</p>
+              <p class="source-metadata" id="source-metadata">REPORTING · ASSOCIATED PRESS VIA LOS ANGELES TIMES · 18 FEBRUARY 2020</p>
+            </div>
+            <a class="source-link" id="source-link" href="https://www.latimes.com/world-nation/story/2020-02-18/india-hastily-builds-wall-along-slum-ahead-of-trump-visit" target="_blank" rel="noreferrer">OPEN CASE SOURCE ↗</a>
+          </div>
+
+          <div class="case-nav-block">
+            <div class="case-nav-heading">
+              <span class="state-tag">CASE INDEX</span>
+              <p>Move through the examples. Each chapter resets to a narrow public image before the evidence opens.</p>
+            </div>
+            <ol class="case-ledger" aria-label="Indian case series">
+              <li><button class="case-nav-button is-current" type="button" data-case="0" aria-current="true"><span>01</span><strong>AHMEDABAD / THE WALL</strong><em>TRUMP VISIT · 2020</em></button></li>
+              <li><button class="case-nav-button" type="button" data-case="1" aria-current="false"><span>02</span><strong>NEW DELHI / THE MAKEOVER</strong><em>G20 SUMMIT · 2023</em></button></li>
+              <li><button class="case-nav-button" type="button" data-case="2" aria-current="false"><span>03</span><strong>NEW DELHI / THE GAMES</strong><em>COMMONWEALTH GAMES · 2010</em></button></li>
+              <li><button class="case-nav-button" type="button" data-case="3" aria-current="false"><span>04</span><strong>AHMEDABAD / THE RIVERFRONT</strong><em>URBAN RENEWAL · 2003–2011</em></button></li>
+            </ol>
           </div>
 
           <div class="pattern-block">
             <div>
-              <span class="state-tag">THE PATTERN</span>
-              <p class="pattern-statement">Major international events can trigger rapid “makeover” drives, making development highly visible while displacement and disruption become less visible.</p>
+              <span class="state-tag">THE REPEATED PATTERN</span>
+              <p class="pattern-statement">Across events and infrastructure projects, visible order can become evidence of progress while displacement, distance and lost livelihoods move outside the frame.</p>
             </div>
-            <div class="pattern-chain" aria-label="Event leads to makeover, public image, and less visible consequences">
-              <span>EVENT</span><i aria-hidden="true">↓</i>
+            <div class="pattern-chain" aria-label="Event or development leads to makeover, public image, and less visible consequences">
+              <span>EVENT / DEVELOPMENT</span><i aria-hidden="true">↓</i>
               <span>MAKEOVER</span><i aria-hidden="true">↓</i>
               <span>PUBLIC IMAGE</span><i aria-hidden="true">↓</i>
-              <span>LESS VISIBLE CONSEQUENCES</span>
+              <span>CONSEQUENCES OUTSIDE IT</span>
             </div>
+          </div>
+
+          <div class="discover-next">
+            <span>CASE <span id="next-case-number">01</span> OF 04 READ</span>
+            <button class="next-case-button" id="next-case" type="button">NEXT CASE →</button>
           </div>
         </section>
 
@@ -138,16 +183,23 @@
               <p class="mental-quote">“What looks better is better.”</p>
             </div>
             <div class="insight-copy">
-              <p class="insight-lede">Our A1 research found that visual order and development can become evidence of progress, while the people and consequences outside the public image become easier to ignore.</p>
+              <p class="insight-lede">Four Indian cases make the mechanism concrete: event readiness and urban renewal sharpen the visible image, while the people and consequences outside it become easier to discount.</p>
+              <div class="mechanism-flow" aria-label="What is shown leads to what people perceive and what becomes progress">
+                <div><span>01</span><strong>WHAT IS SHOWN</strong><small>clean routes · banners · new edges</small></div>
+                <i aria-hidden="true">↓</i>
+                <div><span>02</span><strong>WHAT PEOPLE PERCEIVE</strong><small>order · readiness · improvement</small></div>
+                <i aria-hidden="true">↓</i>
+                <div><span>03</span><strong>WHAT BECOMES “PROGRESS”</strong><small>the image replaces the lived record</small></div>
+              </div>
               <p class="insight-conclusion">When the frame becomes the story, what falls outside it becomes easier to ignore.</p>
-              <button class="replay-button" id="replay-experience" type="button">↶ REPLAY THE FRAME</button>
+              <button class="replay-button" id="replay-experience" type="button">↶ REPLAY THE SERIES</button>
             </div>
           </div>
 
           <footer class="site-footer">
             <span>OPTICS OVER REALITY</span>
             <span>AN INDIVIDUAL RESPONSE TO A1 RESEARCH</span>
-            <span>SEE → DISCOVER → UNDERSTAND</span>
+            <span>SEE → CONTEXT → UNDERSTAND</span>
           </footer>
         </section>
       </main>
